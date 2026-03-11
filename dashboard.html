@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page" data-page="dashboard">
+    <main class="dashboard-shell">
+        <header class="dashboard-header">
+            <div>
+                <p class="brand-kicker">User Dashboard</p>
+                <h1 id="welcomeHeading" class="dashboard-title">Welcome</h1>
+                <p class="page-copy">This dashboard is protected by the shared login state stored in your browser.</p>
+            </div>
+
+            <div class="header-actions">
+                <span id="sessionMode" class="tag">Session</span>
+                <button class="btn btn-secondary" type="button" data-action="logout">Logout</button>
+            </div>
+        </header>
+
+        <section class="summary-grid">
+            <article class="summary-card">
+                <span class="summary-label">Total Tasks</span>
+                <strong id="totalTasks" class="summary-value">0</strong>
+            </article>
+            <article class="summary-card">
+                <span class="summary-label">Completed</span>
+                <strong id="completedTasks" class="summary-value">0</strong>
+            </article>
+            <article class="summary-card">
+                <span class="summary-label">Pending</span>
+                <strong id="pendingTasks" class="summary-value">0</strong>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="panel">
+                <div class="panel-head">
+                    <h2>Account Overview</h2>
+                </div>
+
+                <dl class="details-list">
+                    <div class="detail-row">
+                        <dt>Name</dt>
+                        <dd id="profileName">-</dd>
+                    </div>
+                    <div class="detail-row">
+                        <dt>Username</dt>
+                        <dd id="profileUsername">-</dd>
+                    </div>
+                    <div class="detail-row">
+                        <dt>Email</dt>
+                        <dd id="profileEmail">-</dd>
+                    </div>
+                    <div class="detail-row">
+                        <dt>Member Since</dt>
+                        <dd id="profileJoined">-</dd>
+                    </div>
+                    <div class="detail-row">
+                        <dt>Last Login</dt>
+                        <dd id="profileLastLogin">-</dd>
+                    </div>
+                </dl>
+            </article>
+
+            <article class="panel panel-large">
+                <div class="panel-head">
+                    <div>
+                        <h2>Task Manager</h2>
+                        <p class="panel-copy">Add quick dashboard tasks, mark them complete, or remove them.</p>
+                    </div>
+                    <button id="clearCompletedBtn" class="btn btn-ghost" type="button">Clear Completed</button>
+                </div>
+
+                <div id="taskMessage" class="form-message" aria-live="polite"></div>
+
+                <form id="taskForm" class="task-form" novalidate>
+                    <input id="taskInput" class="input" type="text" placeholder="Add a new task">
+                    <button class="btn btn-primary" type="submit">Add Task</button>
+                </form>
+
+                <ul id="taskList" class="task-list"></ul>
+                <p id="emptyState" class="empty-state">No tasks yet. Add your first item above.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

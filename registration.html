@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page" data-page="register">
+    <div class="page-shell">
+        <section class="auth-card auth-card-wide">
+            <p class="brand-kicker">Registration</p>
+            <h1 class="page-title">Create your account</h1>
+            <p class="page-copy">Register once, then your profile and dashboard tasks are stored locally in this browser.</p>
+
+            <div id="registerMessage" class="form-message" aria-live="polite"></div>
+
+            <form id="registerForm" class="auth-form" novalidate>
+                <div class="field-grid">
+                    <label class="field">
+                        <span>Full Name</span>
+                        <input id="registerName" class="input" type="text" placeholder="Jane Doe" autocomplete="name" required>
+                    </label>
+
+                    <label class="field">
+                        <span>Username</span>
+                        <input id="registerUsername" class="input" type="text" placeholder="janedoe" autocomplete="username" required>
+                    </label>
+                </div>
+
+                <label class="field">
+                    <span>Email</span>
+                    <input id="registerEmail" class="input" type="email" placeholder="jane@example.com" autocomplete="email" required>
+                </label>
+
+                <div class="field-grid">
+                    <label class="field">
+                        <span>Password</span>
+                        <input id="registerPassword" class="input" type="password" placeholder="At least 6 characters" autocomplete="new-password" required>
+                    </label>
+
+                    <label class="field">
+                        <span>Confirm Password</span>
+                        <input id="registerConfirmPassword" class="input" type="password" placeholder="Re-enter password" autocomplete="new-password" required>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Create Account</button>
+            </form>
+
+            <p class="footer-copy">
+                Already registered?
+                <a class="text-link" href="index.html">Back to login</a>
+            </p>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

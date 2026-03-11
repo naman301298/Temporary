@@ -3,134 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Page</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#667eea,#764ba2);
-}
-
-.login-container{
-    width:350px;
-    background:white;
-    padding:40px 30px;
-    border-radius:15px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
-    text-align:center;
-}
-
-.login-container h2{
-    margin-bottom:25px;
-    color:#333;
-}
-
-.input-group{
-    position:relative;
-    margin-bottom:20px;
-}
-
-.input-group input{
-    width:100%;
-    padding:12px 12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    outline:none;
-    font-size:15px;
-    transition:0.3s;
-}
-
-.input-group input:focus{
-    border-color:#667eea;
-    box-shadow:0 0 5px rgba(102,126,234,0.4);
-}
-
-.options{
-    display:flex;
-    justify-content:space-between;
-    font-size:14px;
-    margin-bottom:20px;
-}
-
-.options a{
-    text-decoration:none;
-    color:#667eea;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#667eea;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#5563d1;
-}
-
-.signup{
-    margin-top:20px;
-    font-size:14px;
-}
-
-.signup a{
-    text-decoration:none;
-    color:#667eea;
-    font-weight:bold;
-}
-
-</style>
+<title>Sign In</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+<body class="auth-page" data-page="login">
+    <div class="page-shell">
+        <section class="auth-card">
+            <p class="brand-kicker">Local Access Portal</p>
+            <h1 class="page-title">Welcome back</h1>
+            <p class="page-copy">Sign in with your username or email to open the dashboard.</p>
 
-<body>
+            <div id="loginMessage" class="form-message" aria-live="polite"></div>
 
-<div class="login-container">
+            <form id="loginForm" class="auth-form" novalidate>
+                <label class="field">
+                    <span>Email or Username</span>
+                    <input id="loginIdentifier" class="input" type="text" placeholder="jane@example.com" autocomplete="username" required>
+                </label>
 
-<h2>Login</h2>
+                <label class="field">
+                    <span>Password</span>
+                    <input id="loginPassword" class="input" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+                </label>
 
-<form>
+                <div class="form-row">
+                    <label class="checkbox-row">
+                        <input id="rememberMe" type="checkbox">
+                        <span>Remember me</span>
+                    </label>
 
-<div class="input-group">
-<input type="text" placeholder="Email or Username">
-</div>
+                    <a id="forgotPasswordLink" class="text-link" href="#">Forgot password?</a>
+                </div>
 
-<div class="input-group">
-<input type="password" placeholder="Password">
-</div>
+                <button class="btn btn-primary" type="submit">Login</button>
+            </form>
 
-<div class="options">
-<label>
-<input type="checkbox"> Remember me
-</label>
+            <p class="footer-copy">
+                No account yet?
+                <a class="text-link" href="registration.html">Create one</a>
+            </p>
+        </section>
+    </div>
 
-<a href="#">Forgot Password?</a>
-</div>
-
-<button type="submit">Login</button>
-
-<div class="signup">
-Don't have an account? <a href="#">Sign Up</a>
-</div>
-
-</form>
-
-</div>
-
+    <script src="app.js"></script>
 </body>
 </html>
