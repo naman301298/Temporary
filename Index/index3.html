@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beautiful Login</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#6a11cb,#2575fc);
+overflow:hidden;
+}
+
+/* floating background circles */
+
+body::before,
+body::after{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+border-radius:50%;
+background:rgba(255,255,255,0.15);
+filter:blur(100px);
+}
+
+body::before{
+top:-100px;
+left:-100px;
+}
+
+body::after{
+bottom:-100px;
+right:-100px;
+}
+
+/* glass card */
+
+.login-container{
+width:380px;
+padding:45px 35px;
+border-radius:20px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+box-shadow:0 25px 50px rgba(0,0,0,0.2);
+color:white;
+text-align:center;
+}
+
+/* title */
+
+.login-container h2{
+font-size:28px;
+margin-bottom:30px;
+letter-spacing:1px;
+}
+
+/* input box */
+
+.input-group{
+position:relative;
+margin-bottom:25px;
+}
+
+.input-group input{
+width:100%;
+padding:14px 40px;
+border:none;
+outline:none;
+border-radius:10px;
+background:rgba(255,255,255,0.2);
+color:white;
+font-size:15px;
+}
+
+.input-group input::placeholder{
+color:#ddd;
+}
+
+/* icon */
+
+.input-group i{
+position:absolute;
+left:12px;
+top:50%;
+transform:translateY(-50%);
+color:#fff;
+font-size:14px;
+}
+
+/* focus effect */
+
+.input-group input:focus{
+background:rgba(255,255,255,0.3);
+box-shadow:0 0 10px rgba(255,255,255,0.3);
+}
+
+/* options */
+
+.options{
+display:flex;
+justify-content:space-between;
+font-size:14px;
+margin-bottom:25px;
+}
+
+.options a{
+text-decoration:none;
+color:#fff;
+opacity:0.8;
+}
+
+.options a:hover{
+opacity:1;
+}
+
+/* button */
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:linear-gradient(45deg,#ff7eb3,#ff758c);
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* signup */
+
+.signup{
+margin-top:25px;
+font-size:14px;
+}
+
+.signup a{
+color:#fff;
+font-weight:bold;
+text-decoration:none;
+}
+
+.signup a:hover{
+text-decoration:underline;
+}
+
+/* small animation */
+
+.login-container{
+animation:fade 1s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<h2>Welcome Back</h2>
+
+<form>
+
+<div class="input-group">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="Email or Username">
+</div>
+
+<div class="input-group">
+<i class="fa fa-lock"></i>
+<input type="password" placeholder="Password">
+</div>
+
+<div class="options">
+<label>
+<input type="checkbox"> Remember
+</label>
+
+<a href="#">Forgot?</a>
+</div>
+
+<button type="submit">Login</button>
+
+<div class="signup">
+Don't have an account? <a href="#">Sign Up</a>
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>

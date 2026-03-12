@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Gradient Login</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* Animated gradient background */
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(270deg,#ff7e5f,#feb47b,#6a11cb,#2575fc);
+
+background-size:400% 400%;
+animation:gradientMove 10s ease infinite;
+}
+
+/* Gradient animation */
+
+@keyframes gradientMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* Login Card */
+
+.login-card{
+
+width:380px;
+padding:45px 35px;
+
+background:white;
+
+border-radius:18px;
+
+box-shadow:0 25px 60px rgba(0,0,0,0.2);
+
+text-align:center;
+
+}
+
+/* Title */
+
+.login-card h2{
+
+font-size:28px;
+margin-bottom:30px;
+color:#333;
+
+}
+
+/* Input Fields */
+
+.input-box{
+position:relative;
+margin-bottom:22px;
+}
+
+.input-box input{
+
+width:100%;
+padding:14px 42px;
+
+border-radius:10px;
+border:1px solid #ddd;
+
+outline:none;
+font-size:15px;
+
+transition:0.3s;
+
+}
+
+.input-box input:focus{
+
+border-color:#6a11cb;
+box-shadow:0 0 10px rgba(106,17,203,0.3);
+
+}
+
+/* Icons */
+
+.input-box i{
+
+position:absolute;
+left:12px;
+top:50%;
+transform:translateY(-50%);
+color:#777;
+
+}
+
+/* Options */
+
+.options{
+
+display:flex;
+justify-content:space-between;
+font-size:14px;
+margin-bottom:25px;
+
+}
+
+.options a{
+
+text-decoration:none;
+color:#6a11cb;
+
+}
+
+/* Button */
+
+button{
+
+width:100%;
+padding:14px;
+
+border:none;
+border-radius:12px;
+
+background:linear-gradient(45deg,#6a11cb,#2575fc);
+
+color:white;
+
+font-size:16px;
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+}
+
+/* Signup */
+
+.signup{
+
+margin-top:25px;
+font-size:14px;
+
+}
+
+.signup a{
+
+color:#6a11cb;
+font-weight:600;
+text-decoration:none;
+
+}
+
+/* Card animation */
+
+.login-card{
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-card">
+
+<h2>Sign In</h2>
+
+<form>
+
+<div class="input-box">
+<i class="fa fa-envelope"></i>
+<input type="text" placeholder="Email address">
+</div>
+
+<div class="input-box">
+<i class="fa fa-lock"></i>
+<input type="password" placeholder="Password">
+</div>
+
+<div class="options">
+<label><input type="checkbox"> Remember</label>
+<a href="#">Forgot password?</a>
+</div>
+
+<button>Login</button>
+
+<div class="signup">
+Don't have an account? <a href="#">Sign Up</a>
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
